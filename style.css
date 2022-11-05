@@ -21,16 +21,12 @@ input, button, select {
     width: 150px;
     margin: 5px;
     margin-bottom: 0px;
-    --angle: 0deg;
-    border-image:  linear-gradient(
-        var(--angle), #12c2e9, #c471ed, #f64f59
-    ) 1;
-    animation: 5s rotate linear infinite;
+    border-radius: 10px;
+    border: none;
 } 
 
 .color-input{
    height: 30px;
-   outline: #2d2d2d solid 1px;
 }
 
 .select-mode {
