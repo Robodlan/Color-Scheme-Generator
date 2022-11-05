@@ -4,10 +4,8 @@ const mode = document.getElementById('mode-input')
 const btn = document.getElementById('btn')
 const grid = document.getElementById('grid')
 const hexValue = document.getElementById('hex-value')  
-// const copied = 
+
 var clipboard = new ClipboardJS('#text')  
-
-
 
 btn.addEventListener('click', (e)=> {
    e.preventDefault()
@@ -53,8 +51,6 @@ clipboard.on('error', function (e) {
     console.info('Trigger:', e.trigger);
   });
 
-
-
 function randomColor() {
     const combination = "abcdefg0123456789";
     let result = '';
@@ -65,8 +61,7 @@ function randomColor() {
     return result
   }
   
-
-  function manyColors() {
+function manyColors() {
     const colores  = randomColor();
     colorInput.defaultValue = '#' + colores
     body.style.backgroundColor = '#' + colores
