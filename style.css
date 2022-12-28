@@ -101,16 +101,82 @@ input, button, select {
 }
 
 
-/* @Media */
+        /* @Media */
 
-/* styles for mobile browsers smaller than 480px; (iPhone) */
-@media only screen and (max-device-width: 480px) {
-    .main {
-      display: flex;
-      flex-wrap: wrap;
-       
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    body {
+        width: 300px;
+        overflow: hidden;
+        margin: 0;
     }
-     .grid {
-      flex: 1 100px;    
+    h1 {
+        font-size: 20px;
+    }
+    .nav-bar {
+        padding: 1px;
+    }
+    
+    input, button, select {
+      width: 114px;
+      margin: 3px;
+      border: none;
     } 
+    
+    .color-input{
+       height: 30px;
+    }
+    
+    .select-mode {
+        color: #333 !important;
+        text-align: center;
+        font-weight: 200;
+        background: #f8f8f8;
+    }
+    
+    .btn {
+        font-family: 'Newsreader', serif;
+        font-weight: 600;
+        font-size: 15px;
+    } 
+
+    .main {
+        width: 80px;
+        height: 400px;
+    }
+      
+      .grid {
+          border-radius: 5px;
+          margin: 0 auto;
+          height: 400px;
+          width: 80px;
+    }
+      
+       .text {
+          align-self: flex-end;
+          cursor: pointer;
+          font-size:10px;
+          margin: 0;
+    }
+      
+      .copied {
+          color: #333;
+          font-size: 100px;
+          opacity: 0;
+    }
+    
+    
  }
+
+ @media only screen and (min-device-width: 360px) and (max-device-width: 740px) {
+    
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    
+}
