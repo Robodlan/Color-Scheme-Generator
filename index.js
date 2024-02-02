@@ -37,11 +37,12 @@ function render(postColors) {
 }
 
 function clicked() {
-  document.getElementById('copied').style.color = 'red'; 
+  document.getElementById('copied').style.color =' #c2c2c2'; 
 }
 
 clipboard.on('success', function (e) {
-  copy.textContent = ('Action:', e.action);
+  //  copy.textContent = ('Action:', e.action);
+   copy.textContent = (`${e.text} ${e.action}`)
     console.info('Action:', e.action);
     console.info('Text:', e.text);
     console.info('Trigger:', e.trigger);
