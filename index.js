@@ -8,10 +8,14 @@ const copy = document.getElementById('copied');
 
 var clipboard = new ClipboardJS('#text')  
 
+
 btn.addEventListener('click', (e)=> {
    e.preventDefault()
    getColor()
+   
 })
+
+
 
 function getColor() {
    fetch(`https://www.thecolorapi.com/scheme?hex=${colorInput.value.slice(1)}&mode=${mode.value}`)
@@ -19,9 +23,8 @@ function getColor() {
         .then(data => {
             const postColors = data.colors
             render(postColors)
-            
-            // copied.style.display = "none"
         })
+        
 }
 
 function render(postColors) {
@@ -36,16 +39,12 @@ function render(postColors) {
     grid.innerHTML = html
 }
 
-function clicked() {
-  document.getElementById('copied').style.color =' #c2c2c2'; 
-}
-
 clipboard.on('success', function (e) {
-  //  copy.textContent = ('Action:', e.action);
-   copy.textContent = (`${e.text} ${e.action}`)
+    copy.textContent = (`${e.action} ${e.text}`)
     console.info('Action:', e.action);
     console.info('Text:', e.text);
     console.info('Trigger:', e.trigger);
+    setTimeout(copy.textContent = "", 6000);
   });
 
 clipboard.on('error', function (e) {
@@ -72,5 +71,9 @@ function manyColors() {
   }
 
  manyColors()
+ const timeOut = () => {
+   setTimeout(copy.textContent = "YAaaaa", 10000);
+};
 
+  
 

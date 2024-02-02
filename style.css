@@ -83,10 +83,8 @@ input, button, select {
 }
 
 .copied {
-	color: red;
-    font-size: 3rem;
-
-    /* opacity: 0; */
+	/* color: red; */
+    font-size: 1rem;
 }
 
 @keyframes rotate {
