@@ -1,9 +1,10 @@
-const colorInput = document.getElementById('color-input')
-const body = document.getElementById('body')
-const mode = document.getElementById('mode-input')
-const btn = document.getElementById('btn')
-const grid = document.getElementById('grid')
-const hexValue = document.getElementById('hex-value')  
+const colorInput = document.getElementById('color-input');
+const body = document.getElementById('body');
+const mode = document.getElementById('mode-input');
+const btn = document.getElementById('btn');
+const grid = document.getElementById('grid');
+const hexValue = document.getElementById('hex-value');
+const copy = document.getElementById('copied');  
 
 var clipboard = new ClipboardJS('#text')  
 
@@ -19,7 +20,7 @@ function getColor() {
             const postColors = data.colors
             render(postColors)
             
-            copied.style.display = "none"
+            // copied.style.display = "none"
         })
 }
 
@@ -40,6 +41,7 @@ function clicked() {
 }
 
 clipboard.on('success', function (e) {
+  copy.textContent = ('Action:', e.action);
     console.info('Action:', e.action);
     console.info('Text:', e.text);
     console.info('Trigger:', e.trigger);
