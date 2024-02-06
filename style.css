@@ -83,7 +83,7 @@ input, button, select {
 }
 
 .copied {
-	/* color: red; */
+	color: red;
     font-size: 1rem;
 }
 
