@@ -1,3 +1,4 @@
+
 const colorInput = document.getElementById('color-input');
 const body = document.getElementById('body');
 const mode = document.getElementById('mode-input');
@@ -5,15 +6,18 @@ const btn = document.getElementById('btn');
 const grid = document.getElementById('grid');
 const hexValue = document.getElementById('hex-value');
 const copy = document.getElementById('copied');  
+const text = document.getElementById("text");
 
 
-const clipboard = new ClipboardJS('#text')  
+const clipboard = new ClipboardJS('.copied')  
 
 
-btn.addEventListener('click', (e)=> {
-   e.preventDefault()
-   getColor()
-})
+btn.addEventListener('click', clicked)
+function clicked() {
+  getColor();
+};
+
+   
 
 function getColor() {
    fetch(`https://www.thecolorapi.com/scheme?hex=${colorInput.value.slice(1)}&mode=${mode.value}`)
@@ -36,19 +40,19 @@ function render(postColors) {
 }
 
 clipboard.on('success', function (e) {
-  // text.innerHTML = (`${e.action} ${e.text}`)
-    copy.innerHTML = (`${e.action} ${e.text}`)
-    // console.info('Action:', e.action);
-    // console.info('Text:', e.text);
-    // console.info('Trigger:', e.trigger);
+text.textContent = (`${e.action} ${e.text}`);
+    copy.innerHTML = (`data-clipboard-text="${color.hex.value}"`)
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
     setTimeout(copy.textContent = "", 6000);
   });
 
-// clipboard.on('error', function (e) {
-//     console.info('Action:', e.action);
-//     console.info('Text:', e.text);
-//     console.info('Trigger:', e.trigger);
-//   });
+clipboard.on('error', function (e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+  });
 
 function randomColor() {
     const combination = "abcdefg0123456789";
