@@ -1,42 +1,47 @@
 <!DOCTYPE html>
- <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Color Scheme Generator</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;1,400&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
-    </head>
+<html lang="en">
 
-    <body id="body">
-        <h1>COLOR SCHEME GENERATOR</h1>
-        
-        <nav class="nav-bar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+</head>
 
-            <input  class="color-input" id="color-input" type="color"/>
-                <select class="select-mode"  type="search" id="mode-input">
-                    <option value="monochrome">Monochrome</option>
-                    <option value="monochrome-light">Monochrome Light</option>
-                    <option value="monochrome-dark" >Monochrome-dark</option>
-                    <option value="analogic">Analogic</option>
-                    <option value="analogic-complement">Analogic-complement</option>
-                    <option value="triad">Triad</option>
-                </select>
+<body id="body">
+    
+    <h1 id="title">COLOR SCHEME GENERATOR</h1>
 
-            <button class="btn" id="btn">Button</button>
+    <nav class="nav-bar">
 
-        </nav>
+        <input class="color-input" id="color-input" type="color" />
+        <select class="select-mode" type="search" id="mode-input">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-light">Monochrome Light</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="analogic">Analogic</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
+        </select>
 
-            <main class="main" id="main">
-              <div class="grid" id="grid"></div>
-            </main>
+        <button class="btn" id="btn">Button</button>
 
-        <h2 class="copied" id="copied">Copy</h2>
-        <script src="dist/clipboard.min.js"></script>
-      <script src="index.js"></script>
-    </body>
+    </nav>
+
+    <main class="main" id="main">
+        <div class="grid" id="grid"></div>
+    </main>
+
+    <h2 class="copied" id="copied">Copy</h2>
+
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+</body>
+
 </html>
