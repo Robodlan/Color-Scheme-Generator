@@ -8,8 +8,6 @@ const hexValue = document.getElementById('hex-value');
 const copy = document.getElementById('copied');
 const text = document.getElementById("text");
 const title = document.getElementById("title");
-
-
 const clipboard = new ClipboardJS('#text')
 
 
@@ -44,11 +42,14 @@ clipboard.on('success', function (e) {
   console.info('Action:', e.action);
   console.info('Text:', e.text);
   console.info('Trigger:', e.trigger);
-  // time()
+  time()
 });
 
 function time() {
-  setTimeout(title.innerHTML = "COLOR SCHEME GENERATOR", 6000);
+  console.log(title.innerHTML)
+  if (title.innerHTML = "ITEM COPY") {
+    setTimeout( () => {title.innerHTML = "COLOR SCHEME GENERATOR "}, 5000)
+  }
 }
 
 
@@ -76,9 +77,7 @@ function manyColors() {
 }
 
 manyColors()
-const timeOut = () => {
-  setTimeout(copy.textContent = "YAaaaa", 10000);
-};
+
 
 
 
