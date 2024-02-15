@@ -16,7 +16,6 @@ const clipboard = new ClipboardJS('#text')
 btn.addEventListener('click', clicked)
 function clicked() {
   getColor();
-  copy.innerHTML = "POr fin"
 };
 
 function getColor() {
@@ -31,7 +30,7 @@ function getColor() {
 function render(postColors) {
   let html = ''
   for (let color of postColors) {
-    // console.log(color.name.value)
+  
     html += `
          <div class="grid" style="background-color:${color.hex.value}">
            <h3 onclick="clicked()" type="text" id="text" class="text" data-clipboard-text="${color.hex.value}"><span>${color.hex.value}</span></h3> 
@@ -42,7 +41,6 @@ function render(postColors) {
 
 clipboard.on('success', function (e) {
   title.innerHTML = "ITEM COPY"
-  copy.innerHTML = "Item Copy"
   console.info('Action:', e.action);
   console.info('Text:', e.text);
   console.info('Trigger:', e.trigger);
