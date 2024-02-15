@@ -38,7 +38,9 @@ function render(postColors) {
 }
 
 clipboard.on('success', function (e) {
-  title.innerHTML = "ITEM COPY"
+  title.innerHTML = "ITEM COPY";
+  title.style.color = "#F5F4FC"
+  body.style.backgroundColor = "#19191A";
   console.info('Action:', e.action);
   console.info('Text:', e.text);
   console.info('Trigger:', e.trigger);
@@ -48,7 +50,10 @@ clipboard.on('success', function (e) {
 function time() {
   console.log(title.innerHTML)
   if (title.innerHTML = "ITEM COPY") {
-    setTimeout( () => {title.innerHTML = "COLOR SCHEME GENERATOR "}, 5000)
+    setTimeout( () => {
+      title.innerHTML = "COLOR SCHEME GENERATOR";
+      manyColors()
+     }, 5000)
   }
 }
 
