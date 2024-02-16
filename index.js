@@ -38,7 +38,7 @@ function render(postColors) {
 }
 
 clipboard.on('success', function (e) {
-  title.innerHTML = "ITEM COPY";
+  title.innerHTML = "ITEM COPIED";
   title.style.color = "#F5F4FC"
   body.style.backgroundColor = "#19191A";
   console.info('Action:', e.action);
